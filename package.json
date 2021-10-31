@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Nadia89M/ga-dashboard-plugin/issues"
   },
-  "homepage": "https://github.com/Nadia89M/ga-dashboard-plugin#readme"
+  "homepage": "https://github.com/Nadia89M/ga-dashboard-plugin#readme",
+  "dependencies": {
+    "dir-archiver": "^1.2.0"
+  }
 }
