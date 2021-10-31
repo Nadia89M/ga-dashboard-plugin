@@ -23,4 +23,4 @@ deploy:
   provider: script
   script: npm run deploy
   on:
-    branch: master
+    branch: main
