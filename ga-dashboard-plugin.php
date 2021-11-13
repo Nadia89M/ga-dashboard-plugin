@@ -18,34 +18,14 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-function ga_dashboard_settings_page()
-{
-    add_menu_page(
-        'GA Dashboard',
-        'GA Dashboard',
-        'manage_options',
-        'ga-dashboard',
-        'ga_dashboard_settings_page_markup',
-        'dashicons-analytics',
-        100
-    );
+// Define plugin paths and URLs
+define( 'GADASHBOARD_URL', plugin_dir_url( __FILE__ ) );
+define( 'GADASHBOARD_DIR', plugin_dir_path( __FILE__ ) );
 
-}
-add_action( 'admin_menu', 'ga_dashboard_settings_page' );
+// Create Settings Fields
+include( plugin_dir_path( __FILE__ ) . 'includes/ga-dashboard-settings-fields.php');
 
-
-function ga_dashboard_settings_page_markup()
-{
-    // Double check user capabilities
-    if ( !current_user_can('manage_options') ) {
-      return;
-    }
-    ?>
-    <div class="wrap">
-      <h1><?php esc_html_e( get_admin_page_title() ); ?></h1>
-      <p><?php esc_html_e( 'Some content.'); ?></p>
-    </div>
-    <?php
-}
+// Create Plugin Admin Menus and Setting Pages
+include( plugin_dir_path( __FILE__ ) . 'includes/ga-dashboard-menus.php');
 
 ?>
