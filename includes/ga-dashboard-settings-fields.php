@@ -50,11 +50,11 @@ function gadashboard_settings_ga_id_callback() {
 
   $options = get_option( 'gadashboard_settings' );
 
-	$ga_id = '';
+	$propertyID = '';
 	if( isset( $options[ 'ga_id' ] ) ) {
-		$ga_id = esc_html( $options['ga_id'] );
+		$propertyID = esc_html( $options['ga_id'] );
 	}
 
-  echo '<input type="text" id="gadashboard_customtext" name="gadashboard_settings[ga_id]" value="' . $ga_id . '" />';
+  echo '<input type="text" id="gadashboard_ga_id" name="gadashboard_settings[ga_id]" /> <span>' . $propertyID . '</span>';
 
 }
