@@ -28,4 +28,7 @@ include( plugin_dir_path( __FILE__ ) . 'includes/ga-dashboard-settings-fields.ph
 // Create Plugin Admin Menus and Setting Pages
 include( plugin_dir_path( __FILE__ ) . 'includes/ga-dashboard-menus.php');
 
+// Add GA JS
+include( plugin_dir_path( __FILE__ ) . 'includes/ga-script.php');
+
 ?>
