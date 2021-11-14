@@ -33,3 +33,5 @@ style.css*
 main.css*
 deploy_rsa
 /deploy
+key.json
+.DS_Store

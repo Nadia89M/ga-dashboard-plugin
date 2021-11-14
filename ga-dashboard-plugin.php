@@ -31,4 +31,7 @@ include( plugin_dir_path( __FILE__ ) . 'includes/ga-dashboard-menus.php');
 // Add GA JS
 include( plugin_dir_path( __FILE__ ) . 'includes/ga-script.php');
 
+// Add Hello Analytics Reporting API v4
+include( plugin_dir_path( __FILE__ ) . './HelloAnalytics.php');
+
 ?>
