@@ -17,7 +17,6 @@ before_install:
 - ssh-add deploy_rsa
 - sudo apt-get install -y nodejs
 install:
-- composer install
 - npm install
 script:
 - npm run bundle
