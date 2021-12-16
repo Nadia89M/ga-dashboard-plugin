@@ -1,20 +1,15 @@
-# Travis CI Configuration File
-
 language: php
-
-# Build matrix options
 matrix:
   include:
-    - php: 7.3
-      env: WP_TRAVISCI=travis:phpunit
+  - php: 7.3
+    env: WP_TRAVISCI=travis:phpunit
   allow_failures:
-    - php: 7.3
+  - php: 7.3
   fast_finish: true
-
 before_install:
-  - chmod +x build.sh
-
+- openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+- chmod +x build.sh
 install:
-  - composer install
-
-script: ./build.sh 
+- composer install
+script: "./build.sh"
