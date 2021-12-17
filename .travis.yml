@@ -13,6 +13,7 @@ before_install:
 install:
 - npm install
 script:
+  - echo "hello world"
 deploy:
   skip_cleanup: true
   provider: script
