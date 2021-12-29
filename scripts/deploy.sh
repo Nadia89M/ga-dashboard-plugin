@@ -1,4 +1,4 @@
 #!/bin/bash
 
 rsync -avr --exclude='.DS_Store' --exclude='.DS_Store' --exclude='.stylelintrc.json' --exclude='.eslintrc' --exclude='.git' --exclude='.gitattributes' --exclude='.github' --exclude='.gitignore' --exclude='README.md' --exclude='composer.json' --exclude='composer.lock' --exclude='node_modules' --exclude='vendor' --exclude='package-lock.json' --exclude='package.json' --exclude='.travis.yml' --exclude='phpcs.xml.dist' --exclude='sass' --exclude='scripts' --exclude='deploy_rsa' --exclude='deploy_rsa.enc' --exclude='LICENSE' --exclude='.idea' ./ ./deploy
-scp -r ./deploy/* bitnami@18.169.162.13:/home/bitnami/apps/wordpress/htdocs/wp-content/plugins/ga-dashboard
+scp -r ./deploy/* bitnami@18.135.214.64:/home/bitnami/apps/wordpress/htdocs/wp-content/plugins/ga-dashboard
